@@ -90,7 +90,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="https://wa.me/5511973429600"
+              href="https://wa.me/5511912045757"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-sm transition-all ${

@@ -50,22 +50,22 @@ export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const {
+  /*const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-  });
+  });*/
 
-  const onSubmit = async (data: ContactFormData) => {
+  /*const onSubmit = async (data: ContactFormData) => {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
     console.log('Form data:', data);
     reset();
     alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-  };
+  };*/
 
   return (
     <section id="contato" className="py-20 lg:py-32 bg-slate-50">
@@ -91,7 +91,7 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid place-items-center">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -116,7 +116,7 @@ export function Contact() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511912045757"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors"
@@ -131,144 +131,7 @@ export function Contact() {
             </a>
           </motion.div>
 
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="lg:col-span-3"
-          >
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="bg-white rounded-2xl p-8 shadow-lg"
-            >
-              <div className="grid sm:grid-cols-2 gap-6 mb-6">
-                {/* Name */}
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    {...register('name')}
-                    className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all ${
-                      errors.name ? 'border-red-500' : 'border-slate-200'
-                    }`}
-                    placeholder="Seu nome"
-                  />
-                  {errors.name && (
-                    <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
-                  )}
-                </div>
 
-                {/* Email */}
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    E-mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    {...register('email')}
-                    className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all ${
-                      errors.email ? 'border-red-500' : 'border-slate-200'
-                    }`}
-                    placeholder="seu@email.com"
-                  />
-                  {errors.email && (
-                    <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
-                  )}
-                </div>
-
-                {/* Phone */}
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                    Telefone *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    {...register('phone')}
-                    className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all ${
-                      errors.phone ? 'border-red-500' : 'border-slate-200'
-                    }`}
-                    placeholder="(11) 99999-9999"
-                  />
-                  {errors.phone && (
-                    <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
-                  )}
-                </div>
-
-                {/* Subject */}
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                    Assunto *
-                  </label>
-                  <select
-                    id="subject"
-                    {...register('subject')}
-                    className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all ${
-                      errors.subject ? 'border-red-500' : 'border-slate-200'
-                    }`}
-                  >
-                    <option value="">Selecione um assunto</option>
-                    <option value="empresarial">Direito Empresarial</option>
-                    <option value="tributario">Direito Tributário</option>
-                    <option value="civil">Direito Civil</option>
-                    <option value="trabalhista">Direito Trabalhista</option>
-                    <option value="imobiliario">Direito Imobiliário</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                  {errors.subject && (
-                    <p className="mt-1 text-sm text-red-500">{errors.subject.message}</p>
-                  )}
-                </div>
-              </div>
-
-              {/* Message */}
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  Mensagem *
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  {...register('message')}
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all resize-none ${
-                    errors.message ? 'border-red-500' : 'border-slate-200'
-                  }`}
-                  placeholder="Descreva brevemente seu caso..."
-                />
-                {errors.message && (
-                  <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
-                )}
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Enviando...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Enviar Mensagem
-                  </>
-                )}
-              </button>
-
-              <p className="mt-4 text-sm text-slate-500 text-center">
-                Ao enviar, você concorda com nossa política de privacidade.
-              </p>
-            </form>
-          </motion.div>
         </div>
       </div>
     </section>

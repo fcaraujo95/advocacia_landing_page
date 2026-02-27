@@ -4,7 +4,7 @@ import heroImage from '../utils/img/ferdi.jpeg';
 
 const stats = [
   { icon: Award, value: '14', label: 'Anos de Experiência' },
-  { icon: Shield, value: '+150', label: 'Casos Resolvidos' },
+  { icon: Shield, value: '+600', label: 'Casos Resolvidos' },
 ];
 
 export function Hero() {
@@ -43,7 +43,7 @@ export function Hero() {
               Defesa Trabalhista
               <span className="block text-amber-400">Excepcional</span>
               <span className="block text-2xl sm:text-3xl lg:text-4xl font-normal text-white/80 mt-2">
-                para Você e sua Empresa
+                para assegurar todos os seus direitos
               </span>
             </h1>
 
@@ -54,13 +54,13 @@ export function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <a
-                href="https://wa.me/5511973429600"
+                href="https://wa.me/5511912045757"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-600 text-white font-semibold rounded-full hover:bg-amber-700 transition-all hover:scale-105 shadow-lg shadow-amber-600/30"
               >
                 <Phone className="w-5 h-5" />
-                Consultoria Gratuita
+                Entrar em contato
               </a>
               <a
                 href="#servicos"

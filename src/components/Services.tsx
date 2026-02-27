@@ -73,7 +73,7 @@ export function Services() {
             <span className="text-amber-600"> Especializada</span>
           </h2>
           <p className="text-lg text-slate-600">
-            Ofereço segurança jurídica completa e personalizada para empregadores, 
+            Ofereço segurança jurídica completa e personalizada para empregados, 
             desenvolvidas com base em anos de experiência e conhecimento técnico aprofundado.
           </p>
         </motion.div>
@@ -113,7 +113,7 @@ export function Services() {
 
               {/* CTA */}
               <a
-                href="https://wa.me/5511973429600"
+                href="https://wa.me/5511912045757"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-amber-600 font-medium hover:text-amber-700 transition-colors group/link"
@@ -136,7 +136,7 @@ export function Services() {
             Não encontrou o que procura? Entre em contato para uma consulta personalizada.
           </p>
           <a
-            href="https://wa.me/5511973429600"
+            href="https://wa.me/5511912045757"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-semibold rounded-full hover:bg-slate-800 transition-colors"

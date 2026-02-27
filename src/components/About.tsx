@@ -61,7 +61,7 @@ export function About() {
               {/* Experience Badge */}
               <div className="absolute -bottom-6 -right-6 bg-amber-600 text-white p-6 rounded-2xl shadow-xl">
                 <div className="text-center">
-                  <span className="block text-4xl font-bold">+13</span>
+                  <span className="block text-4xl font-bold">14</span>
                   <span className="text-sm opacity-90">Anos de<br/>Experiência</span>
                 </div>
               </div>
