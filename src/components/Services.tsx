@@ -69,12 +69,12 @@ export function Services() {
             Áreas de Atuação
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Segurança Jurídica
-            <span className="text-amber-600"> Especializada</span>
+            Serviço Jurídico
+            <span className="text-amber-600"> Especializado</span>
           </h2>
           <p className="text-lg text-slate-600">
-            Ofereço segurança jurídica completa e personalizada para empregados, 
-            desenvolvidas com base em anos de experiência e conhecimento técnico aprofundado.
+            Ofereço serviços jurídicos completo e personalizado para empregados e empregadores, 
+            desenvolvidas em base em 14 anos de experiência e conhecimento técnico aprofundado e abrangente.
           </p>
         </motion.div>
 

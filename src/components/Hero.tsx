@@ -4,7 +4,7 @@ import heroImage from '../utils/img/ferdi.jpeg';
 
 const stats = [
   { icon: Award, value: '14', label: 'Anos de Experiência' },
-  { icon: Shield, value: '+600', label: 'Casos Resolvidos' },
+  { icon: Shield, value: '+1000', label: 'Casos Resolvidos' },
 ];
 
 export function Hero() {
@@ -60,7 +60,7 @@ export function Hero() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-600 text-white font-semibold rounded-full hover:bg-amber-700 transition-all hover:scale-105 shadow-lg shadow-amber-600/30"
               >
                 <Phone className="w-5 h-5" />
-                Entrar em contato
+                Falar com advogada
               </a>
               <a
                 href="#servicos"
